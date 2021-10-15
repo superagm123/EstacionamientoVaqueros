@@ -5,15 +5,15 @@ import './Story.css';
 
 const Story = () => {
 	return(
-		<div className="image-container">
-			<div>
+		<div className="story-container">
+			<div className="image-container">
 				<a href="#">
 					<div className="image">
 						<img alt="Car" src={Car}/>
 					</div>
 				</a>
 				<a href="#">
-					<div className="image imagePosition">
+					<div className="image image-position">
 						<img alt="Car" src={Car2}/>
 					</div>
 				</a>
@@ -25,7 +25,7 @@ const Story = () => {
 				  Nullam lobortis mauris sit amet enim tristique porta. Pellentesque justo ante, aliquam ut porttitor vel, volutpat non enim. Nullam ac justo magna. Suspendisse porttitor molestie neque vitae pretium. Maecenas cursus est in magna iaculis pretium. Suspendisse vitae felis ac dolor convallis venenatis vitae auctor purus.
 				</p>
 			</div>
-		</div>//imag-container
+		</div>//image-container
 	);
 }
 

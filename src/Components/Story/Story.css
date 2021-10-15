@@ -1,4 +1,4 @@
-.image-container{
+.story-container{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -8,24 +8,32 @@
 .image{
 	max-width: 15em;
 	max-height: 15em;
-	margin-right: .5em;
 }
 
 @media(min-width: 800px){
-	.image-container{
+	.story-container{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		justify-items: center;
 		margin-right: 5em;
+		max-width: 120em;
 	}
 
 	.image{
 		max-width:  30em;
 		max-height: 30em;
 	}
-	.imagePosition{
+	.image-container{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		max-width: 40em;
+		padding: 2em;
+	}
+
+	.image-position{
 		position: absolute;
-		top: 20em;
-		left: 39em;
-   }
+		top: 10em;
+		left: 10em;
+	}
 }
