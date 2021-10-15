@@ -1,23 +1,19 @@
 import './App.css';
+import React, {Component} from 'react';
+import Navigation from './Components/Navigation/Navigation.js';
+import Story from './Components/Story/Story.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return(
+      <React.Fragment>
+        <div className="bg-green pa2 shadow-5 w-100 mw-100">
+          <Navigation></Navigation>
+        </div>
+        <Story></Story>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;

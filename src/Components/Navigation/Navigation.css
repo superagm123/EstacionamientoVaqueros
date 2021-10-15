@@ -1,0 +1,11 @@
+nav a{
+	display: block;
+	text-align: center;
+	margin: .5em;
+}
+@media(min-width: 768px){
+	nav{
+		display: flex;
+		justify-content: flex-end;
+	}
+}
