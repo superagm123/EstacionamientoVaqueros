@@ -18,9 +18,9 @@ const Story = () => {
 					</div>
 				</a>
 			</div>
-			<div className="tc">
-				<h1>Nuestra Historia</h1>
-				<p>
+			<div className="tc dib v-top athelas">
+				<h1 className="f1 lh-title">Nuestra Historia</h1>
+				<p className="f3 lh-solid">
 				  Nullam mattis mauris nec accumsan consectetur. Morbi sed ipsum urna. Ut quis lorem luctus, cursus neque sit amet, imperdiet massa.
 				  Nullam lobortis mauris sit amet enim tristique porta. Pellentesque justo ante, aliquam ut porttitor vel, volutpat non enim. Nullam ac justo magna. Suspendisse porttitor molestie neque vitae pretium. Maecenas cursus est in magna iaculis pretium. Suspendisse vitae felis ac dolor convallis venenatis vitae auctor purus.
 				</p>

@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from 'react';
 import Navigation from './Components/Navigation/Navigation.js';
 import Story from './Components/Story/Story.js';
+import About from './Components/About/About.js';
 
 class App extends Component {
   render(){
@@ -11,6 +12,7 @@ class App extends Component {
           <Navigation></Navigation>
         </div>
         <Story></Story>
+        <About></About>
       </React.Fragment>
     );
   }
