@@ -1,9 +1,10 @@
-.title,p{
+.title{
 	text-align: center;
+	margin-top: 2rem;
 }
 
 @media(min-width: 800px){
 	.title{
-		text-align: right;
+		text-align: left;
 	}
 }

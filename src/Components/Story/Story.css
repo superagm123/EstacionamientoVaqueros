@@ -1,18 +1,13 @@
 .story-container{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 2.5em;
+	display: block;
 }
 
 .image{
-	max-width: 15em;
-	max-height: 15em;
-	transition: all .2s ease-in-out;
+	transition: all .5s ease-in-out;
 }
 
 .image:hover{
-	transform: rotate(-10deg);
+	transform: rotate3d(0, 5, 7, 360deg);
 	filter: grayscale(1);
 }
 
@@ -20,29 +15,11 @@
 	.story-container{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		justify-items: center;
-		margin-right:  10em;
-		height: 20em;
-		max-width: 120em;
+		align-items: center;
+		grid-gap: 5rem;
+		max-width: 120rem;
+		margin: 0 auto;
+		width: 95%;
 	}
 
-	.image-container{
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		width: 40em;
-		max-width: 40em;
-		padding: 2em;
-	}
-
-	.image{
-		max-width:  30em;
-		max-height: 30em;
-	}
-
-	.image-position{
-		position: absolute;
-		top: 10em;
-		left: 20em;
-	}
 }
