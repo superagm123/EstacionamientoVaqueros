@@ -1,12 +1,24 @@
 import React from 'react';
+import Car from './Car.png';
 import './About.css';
 
-const About = () => {
+const Story = () => {
 	return(
-		<section className="bg-light-green container">
-			<h1 className="near-white ml5 title">Sobre Nosotros</h1>
-		</section>
+		<div className="about-container">
+			<div className="image center">
+				<a href="https://www.pexels.com/photo/photography-of-gray-sports-car-919073/" rel="noopener noreferrer nofollow" target="_blank">
+					<img alt="Car" src={Car}/>
+				</a>
+			</div>
+			<div className="tc athelas">
+				<h1 className="f-subheadline lh-title">Sobre Nosotros</h1>
+				<p className="f2 lh-solid">
+				  Nullam mattis mauris nec accumsan consectetur. Morbi sed ipsum urna. Ut quis lorem luctus, cursus neque sit amet, imperdiet massa.
+				  Nullam lobortis mauris sit amet enim tristique porta. Pellentesque justo ante, aliquam ut porttitor vel, volutpat non enim. Nullam ac justo magna. Suspendisse porttitor molestie neque vitae pretium. Maecenas cursus est in magna iaculis pretium. Suspendisse vitae felis ac dolor convallis venenatis vitae auctor purus.
+				</p>
+			</div>
+		</div>//image-container
 	);
 }
 
-export default About;
+export default Story;
