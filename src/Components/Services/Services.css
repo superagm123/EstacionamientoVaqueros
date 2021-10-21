@@ -1,4 +1,17 @@
-.about-title,
-.about-text{
+.service{
 	margin-top: 2rem;
+}
+.service-icon{
+	height: 15rem;
+}
+
+@media(min-width: 800px){
+	.services{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 5rem;
+	}
+	.service{
+		margin: 0 auto;
+	}
 }
