@@ -1,6 +1,9 @@
 import React from 'react';
 import './Services.css';
 import Service from './Service/Service.js';
+import icon1 from './Icons/icon_1.png';
+import icon2 from './Icons/icon_2.png';
+import icon3 from './Icons/icon_3.png';
 
 const Services = () => {
 	return(
@@ -9,7 +12,8 @@ const Services = () => {
 			<div className="services">
 				<Service 
 				title="valet parking"
-				icon = ""
+				icon = {icon1}
+				link = "https://www.flaticon.com/authors/freepik"
 				content = "
 				Sed eleifend, nisi sit amet cursus cursus, nunc odio interdum erat, 
 				id tempus felis enim ac nisi. Integer auctor nunc eget nibh efficitur gravida.
@@ -18,7 +22,8 @@ const Services = () => {
 				></Service>
 				<Service 
 				title="techado"
-				icon = ""
+				link="https://www.flaticon.com/authors/those-icons"
+				icon = {icon2}
 				content = "
 				Nullam non dictum felis. Pellentesque sagittis vestibulum elit, nec tincidunt 
 				quam fermentum sit amet. Sed imperdiet ligula sed justo posuere, non iaculis 
@@ -27,7 +32,8 @@ const Services = () => {
 				></Service>
 				<Service 
 				title="Pension"
-				icon = ""
+				link=""
+				icon = {icon3}
 				content = "
 				Nullam non dictum felis. Pellentesque sagittis vestibulum elit, 
 				nec tincidunt quam fermentum sit amet. Sed imperdiet ligula sed justo posuere,

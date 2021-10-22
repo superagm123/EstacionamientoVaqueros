@@ -1,12 +1,13 @@
-nav a{
+nav p{
 	display: block;
 	text-align: center;
 	margin: .5em;
 }
-@media(min-width: 768px){
+@media(min-width: 800px){
 	nav{
 		display: flex;
 		justify-content: flex-end;
-		align-items: center;
+		clip-path: ellipse(69% 100% at 51.9% 0%);
+		height: 15rem;
 	}
 }
