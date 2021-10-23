@@ -15,3 +15,8 @@ h1{
   margin: 2.5rem auto;
   padding: 2.5rem;
 }
+
+.leaft-container{
+  width: 100vw;
+  height: 100vh;
+}
