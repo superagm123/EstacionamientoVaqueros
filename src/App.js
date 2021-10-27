@@ -4,6 +4,7 @@ import Navigation from './Components/Navigation/Navigation.js';
 import About from './Components/About/About.js';
 import Services from './Components/Services/Services.js';
 import Location from './Components/Location/Location.js';
+import Contact from './Components/Contact/Contact.js';
 
 class App extends Component {
   render(){
@@ -13,6 +14,7 @@ class App extends Component {
         <About></About>
         <Services></Services>
         <Location></Location>
+        <Contact></Contact>
       </React.Fragment>
     );
   }
