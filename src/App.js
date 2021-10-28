@@ -5,6 +5,7 @@ import About from './Components/About/About.js';
 import Services from './Components/Services/Services.js';
 import Location from './Components/Location/Location.js';
 import Contact from './Components/Contact/Contact.js';
+import Footer from './Components/Footer/Footer.js';
 
 class App extends Component {
   render(){
@@ -15,6 +16,7 @@ class App extends Component {
         <Services></Services>
         <Location></Location>
         <Contact></Contact>
+        <Footer></Footer>
       </React.Fragment>
     );
   }
