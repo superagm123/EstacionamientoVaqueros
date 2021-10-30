@@ -16,7 +16,8 @@ h1{
   padding: 2.5rem;
 }
 
-.leaft-container{
-  width: 100vw;
-  height: 100vh;
+.fixed{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }

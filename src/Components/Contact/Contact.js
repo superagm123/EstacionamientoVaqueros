@@ -14,7 +14,7 @@ const Contact = () => {
 						<div className="mt3">
 							<label 
 							className="db fw6 lh-copy f2"
-							for="name">
+							htmlFor="name">
 							Nombre
 							</label>
 							<input 
@@ -26,7 +26,7 @@ const Contact = () => {
 						<div className="mv3">
 							<label 
 							className="db fw6 lh-copy f2"
-							for="email">
+							htmlFor="email">
 							Correo electrónico
 							</label>
 							<input 
@@ -38,7 +38,7 @@ const Contact = () => {
 						<div className="mv3">
 							<label 
 							className="db fw6 lh-copy f2"
-							for="message">
+							htmlFor="message">
 							Mensaje
 							</label>
 							<textarea 
