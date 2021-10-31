@@ -4,7 +4,7 @@ import './About.css';
 
 const Story = () => {
 	return(
-		<div className="about-container">
+		<div id="about" className="about-container">
 			<div className="image center">
 				<a href="https://www.pexels.com/photo/photography-of-gray-sports-car-919073/" rel="noopener noreferrer nofollow" target="_blank">
 					<img alt="Car" src={Car}/>

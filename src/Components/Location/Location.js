@@ -17,7 +17,7 @@ const attribution = "https://www.maptiler.com/copyright/"
 const Location = () => {
 	return(
 		<React.Fragment>
-		    <h1 className="f-subheadline tc">ubicación</h1>
+		    <h1 id="location" className="f-subheadline tc">ubicación</h1>
 			<MapContainer
 			className="map-container"
 			center={center}

@@ -7,7 +7,7 @@ import icon3 from './Icons/icon_3.png';
 
 const Services = () => {
 	return(
-		<div className="bg-light-red tc container near-white">
+		<div id="services" className="bg-light-red tc container near-white">
 			<h1 className="f-subheadline f-subheadline about-title">Servicios</h1>
 			<div className="services">
 				<Service 

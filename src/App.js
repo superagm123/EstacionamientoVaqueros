@@ -9,13 +9,9 @@ import Footer from './Components/Footer/Footer.js';
 
 class App extends Component {
 
-  constructor(){
-    super();
-  }
-
   componentDidMount(){
      const {fixedNavigation} = this;
-    fixedNavigation();
+     fixedNavigation();
   }
 
   fixedNavigation = () => {
@@ -28,11 +24,20 @@ class App extends Component {
    observer.observe(about);
   }
 
+  scrollNavigation = event => {
+    const links = document.querySelectorAll('.links a');
+    links.forEach(link => {
+      event.preventDefault();
+      const section = document.querySelector(event.target.attributes.href.value);
+      section.scrollIntoView({behavior: 'smooth'});
+    });
+  }
 
   render(){
+    const {scrollNavigation} = this;
     return(
       <React.Fragment>
-        <Navigation></Navigation>
+        <Navigation scrollNavigation={scrollNavigation}></Navigation>
         <About></About>
         <Services></Services>
         <Location></Location>

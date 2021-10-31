@@ -4,7 +4,7 @@ import './Contact.css';
 const Contact = () => {
 	return(
 		<React.Fragment>
-			<div className="container bg-light-green near-white">
+			<div id="contact" className="container bg-light-green near-white">
 				<h1 className="f-subheadline tc">Contacto</h1>
 				<form>
 					<fieldset className="ba b--transparent ph0 mh0">
