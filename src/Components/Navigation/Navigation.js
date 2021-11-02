@@ -1,11 +1,18 @@
 import React from 'react';
 import './Navigation.css';
+import Bars from './Icons/bars.svg';
 
-const Navigation = ({scrollNavigation}) => {
+const Navigation = ({scrollNavigation, responsiveNavigation}) => {
 	return(
 		<React.Fragment>
-			<header className="header">
-				<nav className="bg-green f2 links shadow-5 pa4 ttu">
+			<header className="header bg-green shadow-5 pa4">
+				<div 
+				className="mobile-menu"
+				onClick={responsiveNavigation}
+				>
+					<img alt="responsive menu" src={Bars}/>
+				</div>
+				<nav className="f2 links ttu">
 					<a
 					href="#about"
 					className="mr2 pointer near-white grow no-underline"

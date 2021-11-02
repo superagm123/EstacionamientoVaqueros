@@ -33,11 +33,20 @@ class App extends Component {
     });
   }
 
+  responsiveNavigation = () => {
+    const navigation = document.querySelector('.links');
+    navigation.classList.toggle('show');
+  }
+
   render(){
-    const {scrollNavigation} = this;
+    const {scrollNavigation, responsiveNavigation} = this;
     return(
       <React.Fragment>
-        <Navigation scrollNavigation={scrollNavigation}></Navigation>
+        <Navigation 
+        scrollNavigation={scrollNavigation}
+        responsiveNavigation={responsiveNavigation}
+        >
+        </Navigation>
         <About></About>
         <Services></Services>
         <Location></Location>
