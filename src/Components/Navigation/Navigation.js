@@ -15,26 +15,26 @@ const Navigation = ({scrollNavigation, responsiveNavigation}) => {
 				<nav className="f2 links ttu">
 					<a
 					href="#about"
-					className="mr2 pointer near-white grow no-underline"
+					className="mr2 hover-light-yellow pointer near-white grow no-underline"
 					onClick={scrollNavigation}>
 					inicio
 					</a>
 					<a 
 					href="#services"
-					className="mr2 pointer near-white grow no-underline"
+					className="mr2 hover-light-yellow pointer near-white grow no-underline"
 					onClick={scrollNavigation}
 					>
 					servicios
 					</a>
 					<a 
 					href="#location" 
-					className="mr2 pointer near-white grow no-underline"
+					className="mr2 pointer hover-light-yellow  near-white grow no-underline"
 					onClick={scrollNavigation}>
 					ubicación
 					</a>
 					<a 
 					href="#contact" 
-					className="grow pointer near-white no-underline"
+					className="grow pointer hover-light-yellow  near-white no-underline"
 					onClick={scrollNavigation}>
 					contacto
 					</a>
