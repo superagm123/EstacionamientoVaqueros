@@ -1,0 +1,29 @@
+.scrollTop{
+	position: fixed;
+	bottom: 16rem;
+	left: 85%;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	z-index: 1;
+}
+
+.scrollIcon{
+	padding: 1rem;
+	animation: scrollTop .5s alternate ease infinite;
+}
+
+@keyframes scrollTop{
+	from{
+		transform: translateY(.2rem);
+	}
+	to{
+		transform: translateY(-.1rem);
+	}
+}
+
+@media(min-width: 768px){
+	.scrollTop{
+		left: 92%;
+	}
+}
