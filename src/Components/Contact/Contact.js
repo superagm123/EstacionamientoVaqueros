@@ -52,7 +52,8 @@ const Contact = () => {
 						<input 
 						className="b ph3 pv2 input-reset ba b--white w-50 grow 
 						pointer near-white bg-green fw6 f3 dib"
-						type="submit"/>
+						type="submit"
+						value="Enviar"/>
 					</div>
 				</form>
 			</div>
