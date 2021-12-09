@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Swal from 'sweetalert2';
 import './Contact.css'; 
 
 class Contact extends Component{
@@ -23,20 +24,31 @@ class Contact extends Component{
 		this.setState({message: event.target.value});
 	}
 
-	cleanEntries = () => {
-		let inputName = document.querySelector("#name");
-		let inputEmail = document.querySelector("#email");
-		let inputMessage = document.querySelector("#message");
-
-		inputName.value = "";
-		inputEmail.value = "";
-		inputMessage.value = "";
+	onRefreshPage = () => {
+		window.location.reload();
 	}
 
+	onShowAlert = (message, icon) => {
+		const {onRefreshPage} = this;
+		Swal.fire(
+			  	{
+			  		title: `${message}`,
+			  		text: 'presionar por fuera del mensaje o presionar botón para cerrar',
+			  		icon: `${icon}`,
+			  		confirmButtonText: 'Cerrar'
+			  	}
+			  ).then(result => {
+			  	if(result.value){
+			  		onRefreshPage();
+			  	}
+			  });
+	}
+
+
 	onSubmitForm = event => {
-		event.preventDefault();
 		const {name, email, message} = this.state;
-		const {cleanEntries} = this;
+		const {onShowAlert} = this;
+		event.preventDefault();
 		if(name.length > 0 && email.length > 0 && message.length > 0){
 			fetch('http://localhost:3001/send-email', {
 				method: 'post',
@@ -48,14 +60,12 @@ class Contact extends Component{
 				})
 			})
 			  .then(response => response.json())
-			  .then(message => {
-				  	if(message){
-				  		alert('Error al enviar el mensaje');
-				  	}
+			  .catch(error => {
+			  	console.log(error);
 			  })
-			  cleanEntries();
+			  onShowAlert("Correo enviado exitosamente", "success");
 			}else{
-				alert("El formulario no debe estar vacío");
+				onShowAlert("Ningún campo del formulario debe estar vacío", "error");
 			}
 	}
 
@@ -107,7 +117,7 @@ class Contact extends Component{
 							className="w-100 pa2 ba 
 							hover-bg-black hover-white"
 							rows="10"
-							maxlength="800"
+							maxLength="800"
 							onChange={onMessageChange}>	
 							</textarea>
 						</div>
