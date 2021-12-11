@@ -1,9 +1,9 @@
 import React from 'react';
 import './Services.css';
 import Service from './Service/Service.js';
-import icon1 from './Icons/icon_1.png';
-import icon2 from './Icons/icon_2.png';
-import icon3 from './Icons/icon_3.png';
+import icon1 from '../img/icon_1.png';
+import icon2 from '../img/icon_2.png';
+import icon3 from '../img/icon_3.png';
 
 const Services = () => {
 	return(

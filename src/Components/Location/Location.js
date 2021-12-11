@@ -8,7 +8,7 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import {Icon} from 'leaflet';
-import logo from './logo.png';
+import logo from '../img/logo.png';
 
 const center = [20.886559062695074, -103.83922971755015];
 const url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=RaGKBYNAW1XOoAn2V7VA";

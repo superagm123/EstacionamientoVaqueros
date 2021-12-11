@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'; 
 import {useWindowScroll} from 'react-use';
 import './ScrollToTop.css';
-import Arrow from './Icons/Arrow.png';
+import Arrow from '../img/Arrow.png';
 
 const ScrollToTop = () => {
 	const {y: pageYOffset} = useWindowScroll();

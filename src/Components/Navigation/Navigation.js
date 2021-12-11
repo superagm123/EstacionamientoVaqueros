@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navigation.css';
-import Bars from './Icons/bars.svg';
+import Bars from '../img/bars.svg';
 
 const Navigation = ({scrollNavigation, responsiveNavigation}) => {
 	return(

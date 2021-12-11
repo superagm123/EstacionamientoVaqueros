@@ -1,5 +1,5 @@
 import React from 'react';
-import Car from './Car.png';
+import Car from '../img/Car.png';
 import './About.css';
 
 const Story = () => {
