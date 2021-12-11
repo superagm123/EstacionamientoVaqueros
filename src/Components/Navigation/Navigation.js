@@ -1,11 +1,21 @@
 import React from 'react';
 import './Navigation.css';
 import Bars from '../img/bars.svg';
+import Logo from '../Logo/Logo.js';
 
 const Navigation = ({scrollNavigation, responsiveNavigation}) => {
 	return(
 		<React.Fragment>
-			<header className="header bg-green shadow-5 pa4">
+			<header className="header bg-green shadow-5 pa3">
+			<div className="logo-container mt3 flex justify-center items-center">
+				<a href="#about"><Logo></Logo></a>
+				<h1 
+				className="near-white baskerville animate__animated 
+				animate__lightSpeedInRight animate__infinite infinite
+				animate__slow logo-title">
+				estacionamiento vaqueros
+				</h1>
+			</div>
 				<div 
 				className="mobile-menu"
 				onClick={responsiveNavigation}

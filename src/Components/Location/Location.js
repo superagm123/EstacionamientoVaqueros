@@ -22,7 +22,7 @@ const Location = () => {
 			className="map-container"
 			center={center}
 			zoom={18}
-			style={{width: '100vw', height: '100vh'}}>
+			style={{width: '80vw', height: '80vh'}}>
 			<TileLayer
 			  url={url}
 			  attribution={attribution}

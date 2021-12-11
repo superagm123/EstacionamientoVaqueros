@@ -92,7 +92,7 @@ class Contact extends Component{
 		const {onNameChange, onEmailChange, onMessageChange, onSubmitForm} = this;
 		return(
 			<React.Fragment>
-			<div id="contact" className="container mv6 bg-light-green near-white">
+			<div id="contact" className="container mv5 bg-light-green near-white">
 				<h1 className="f-subheadline tc">Contacto</h1>
 				<form>
 					<fieldset className="ba b--transparent ph0 mh0">

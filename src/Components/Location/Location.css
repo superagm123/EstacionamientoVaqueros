@@ -1,6 +1,13 @@
 .map-container{
-	max-width: 120rem;
-	max-height: 80rem;
+	max-width: 50rem;
+	max-height: 50rem;
 	margin: 0 auto;
 	z-index: 0;
+}
+
+@media(min-width: 800px){
+	.map-container{
+		max-width: 120rem;
+		max-height: 80rem;
+	}
 }

@@ -12,6 +12,10 @@ nav a{
 	margin: 1rem;
 }
 
+.logo-title{
+	font-size: 1.5rem;
+	white-space: nowrap;
+}
 
 .mobile-menu{
 	margin: 0 auto;
@@ -20,7 +24,7 @@ nav a{
 }
 
 .mobile-menu img{
-	width: 5rem;
+	width: 3.5rem;
 }
 
 .show{
@@ -32,17 +36,26 @@ nav a{
 @media(min-width: 800px){
 	header{
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		clip-path: ellipse(69% 75% at 51.9% 0%);
 		height: 15rem;
 	}
-	nav {
+	nav{
 		display: flex;
 		justify-content: flex-end;
 		visibility: visible;
+		margin-top: 1rem;
 		opacity: 1;
 	}
+
 	.mobile-menu{
 		display: none;
+	}
+
+	.logo-container{
+		margin-bottom: 7rem;
+	}
+	.logo-title{
+		font-size: 2.5rem;
 	}
 }
