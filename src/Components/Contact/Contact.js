@@ -33,24 +33,24 @@ class Contact extends Component{
 		Swal.fire(
 			  	{
 			  		title: `${message}`,
-			  		text: 'presionar por fuera del mensaje o presionar botón para cerrar',
+			  		text: 'presionar por fuera del mensaje o presionar el botón para cerrar',
 			  		icon: `${icon}`,
 			  		confirmButtonText: 'Cerrar'
 			  	}
 			  ).then(result => {
-			  	if(result.value){
+			  	if(result.value && icon === 'success'){
 			  		onRefreshPage();
 			  	}
 			  });
 	}
 
+	onEmailValidation = email => {
+		const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		return emailPattern.test(email);
+	}
 
-	onSubmitForm = event => {
-		const {name, email, message} = this.state;
-		const {onShowAlert} = this;
-		event.preventDefault();
-		if(name.length > 0 && email.length > 0 && message.length > 0){
-			fetch('http://localhost:3001/send-email', {
+	onSendingEmail = (url, name, email, message) => {
+		fetch(url, {
 				method: 'post',
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify({
@@ -58,15 +58,34 @@ class Contact extends Component{
 					email: email,
 					message: message 
 				})
-			})
-			  .then(response => response.json())
-			  .catch(error => {
-			  	console.log(error);
-			  })
-			  onShowAlert("Correo enviado exitosamente", "success");
+		})
+		  .then(response => response.json())
+		  .catch(error => {
+		  	console.log(error);
+		  })
+	} 
+
+
+	onSubmitForm = event => {
+		const {name, email, message} = this.state;
+		const {onShowAlert, onEmailValidation, onSendingEmail} = this;
+		event.preventDefault();
+		if(name.length > 0 && email.length > 0 && message.length > 0){
+			if(onEmailValidation(email)){
+				  onSendingEmail(
+				  	'http://localhost:3001/send-email',
+				  	name,
+				  	email, 
+				  	message
+				  )
+				  onShowAlert("Correo enviado exitosamente", "success");
 			}else{
-				onShowAlert("Ningún campo del formulario debe estar vacío", "error");
+				onShowAlert("Debes introducir un correo válido", "warning");
 			}
+			
+		}else{
+			onShowAlert("Ningún campo del formulario debe estar vacío", "error");
+		}
 	}
 
 	render(){
